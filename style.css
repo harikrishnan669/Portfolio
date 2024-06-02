@@ -250,13 +250,13 @@ span {
 
 @keyframes words {
   0%, 21% {
-    content: 'Computer Science Student';
+    content: 'Computer Science Undergraduate';
   }
   21%, 40% {
     content: 'Designer';
   }
   41%, 60% {
-    content: 'Computer Science Student';
+    content: 'Computer Science Undergraduate';
   }
   61%, 80% {
     content: 'Designer';
