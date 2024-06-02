@@ -16,6 +16,7 @@
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -178,6 +179,23 @@
              Things never happen the same way twice
         </p>
     </footer>
-    <script src="/assets/js/script.js"></script>
+    <script>
+       document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+  
+    menuIcon.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  
+    document.addEventListener('click', (event) => {
+      if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) {
+        navbar.classList.remove('active');
+      }
+    });
+  });
+  
+      </script>
 </body>
 </html>
+
