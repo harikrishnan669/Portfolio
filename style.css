@@ -18,7 +18,7 @@
 }
 
 html {
-  font-size: 55%;
+  font-size: 50%;
   overflow-x: hidden;
 }
 
@@ -160,12 +160,12 @@ span {
 }
 
 .home-img {
-  border-radius: 50%;
+  border-radius: 40%;
 }
 
 .home-img img {
   position: relative;
-  width: 32vw;
+  width: 22vw;
   border-radius: 50%;
   box-shadow: 0 0 25px var(--main-color);
   cursor: pointer;
@@ -297,7 +297,7 @@ span {
     font-size: 5rem;
   }
   .home-img img {
-    width: 70vw;
+    width: 50vw;
     margin-top: 4rem;
   }
 }
@@ -357,7 +357,7 @@ span {
 
 @media screen and (max-width: 600px) {
   .skills .container {
-    margin: 0;
+    margin: auto;
     padding: 0;
   }
   .skills .container .row {
@@ -368,7 +368,7 @@ span {
   }
   .skills .container {
     margin-top: 5px;
-    width: 90%;
+    width: 70%;
   }
 }
 .education {
@@ -487,6 +487,132 @@ span {
   font-weight: 500;
   text-align: left;
   line-height: 1.6;
+}
+.experience{
+  background: var(--second-bg-color);
+}
+.experience .container {
+  background: #000;
+  color: var(--text-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 85%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.experience .container .row {
+  display: grid;
+  grid-template-columns: repeat(4, 1.75fr);
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+
+.experience .container .bar {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 1rem;
+  background: #000;
+  box-shadow: 0 4px 10px var(--main-color);
+  transition: 0.3s ease;
+}
+
+.experience .container .bar:hover {
+  box-shadow: 0 4px 20px var(--main-color);
+}
+
+.experience .container .bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.experience .container .bar .info span {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .experience .container {
+    margin: auto;
+    padding: 0;
+  }
+  .experience .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem;
+    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 1rem;
+  }
+  .experience .container {
+    margin-top: 5px;
+    width: 90%;
+  }
+}
+.projects{
+  background: var(--bg-color);
+}
+.projects .container {
+  background: #000;
+  color: var(--text-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.projects .container .row {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+
+.projects .container .bar {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 1rem;
+  background: #000;
+  box-shadow: 0 4px 10px var(--main-color);
+  transition: 0.3s ease;
+}
+
+.projects .container .bar:hover {
+  box-shadow: 0 4px 20px var(--main-color);
+}
+
+.projects .container .bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.projects .container .bar .info span {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .projects .container {
+    margin: auto;
+    padding: 0;
+  }
+  .projects .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem;
+    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 1rem;
+  }
+  .projects .container {
+    margin-top: 5px;
+    width: 90%;
+  }
 }
 .contact{
   background: var(--second-bg-color);
