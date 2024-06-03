@@ -113,8 +113,12 @@
                         <h3>Christ Nagar Senior Secondary School</h3>
                         <h2> 2019-2020</h2>
                         <p>10th Standard</p>
-                        <p> I have successfully completed my 10th standard from Christ Nagar Senior Secondary School, a CBSE institution, with an impressive score of 88%! I am grateful for the unwavering support of my teachers, family, and friends who have guided and encouraged me throughout this journey.</p>
-                        <h2> Grade->88%</h2>
+                        <h4>I have successfully completed my 10th standard from Christ Nagar Senior Secondary School, a CBSE institution, with an impressive score of 88%.</h4>
+                        <button class="readMoreBtn">Read More</button>
+                        <div class="moreContent" style="display: none;">
+                            <p>I am grateful for the unwavering support of my teachers, family, and friends who have guided and encouraged me throughout this journey.</p>
+                        </div>
+                        <h2>Grade->88%</h2>
                     </div>
                 </div>
             </div>
@@ -124,9 +128,12 @@
                         <h3>St Josephs Higher Secondary School</h3>
                         <h2>2021-2022</h2>
                         <p>12th Standard</p>
-                        <p> I have successfully completed my 12th standard from St. Joseph's Higher Secondary School, a state syllabus institution, with an outstanding score of 94%! I am deeply thankful for the support and encouragement from my teachers, family, and friends who have been instrumental in my achievement. </p>
+                        <h4> I have successfully completed my 12th standard from St. Joseph's Higher Secondary School, a state syllabus institution, with an outstanding score of 94%.</h4>
+                        <button class="readMoreBtn">Read More</button>
+                        <div class="moreContent" style="display: none;">
+                            I am deeply thankful for the support and encouragement from my teachers, family, and friends who have been instrumental in my achievement.
+                        </div>
                         <h2>Grade->94%</h2>
-
                     </div>
                 </div>
             </div>
@@ -136,7 +143,11 @@
                         <h3>Rajiv Gandhi Institute of Technology Kottayam</h3>
                         <h3>2022-2026</h3>
                         <p>Btech in CSE</p>
-                        <p>I have joined Rajiv Gandhi Institute of Technology in Kottayam, a prestigious government engineering college, where I am pursuing a Bachelor of Technology (B.Tech) degree in Computer Science and Engineering. This marks the beginning of an exciting chapter in my academic journey. I am eager to immerse myself in the world of technology and innovation, guided by the esteemed faculty members of the institution.</p>
+                        <h4>I have joined Rajiv Gandhi Institute of Technology in Kottayam, a prestigious government engineering college, where I am pursuing a Bachelor of Technology (B.Tech) degree in Computer Science and Engineering. </h4>
+                        <button class="readMoreBtn">Read More</button>
+                        <div class="moreContent" style="display: none;">
+                            <p>This marks the beginning of an exciting chapter in my academic journey. I am eager to immerse myself in the world of technology and innovation, guided by the esteemed faculty members of the institution.</p>
+                        </div>
                         <h2>CGPA->7.78</h2>
                     </div>
                 </div>
@@ -235,13 +246,23 @@
     menuIcon.addEventListener('click', () => {
       navbar.classList.toggle('active');
     });
-  
     document.addEventListener('click', (event) => {
       if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) {
         navbar.classList.remove('active');
       }
     });
   });
+  document.addEventListener('DOMContentLoaded', function () {
+        const readMoreButtons = document.querySelectorAll('.readMoreBtn');
+        readMoreButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const moreContent = this.nextElementSibling;
+                moreContent.style.display = moreContent.style.display === 'none' ? 'block' : 'none';
+                
+                this.textContent = moreContent.style.display === 'none' ? 'Read More' : 'Read Less';
+            });
+        });
+    });
   
       </script>
 </body>
