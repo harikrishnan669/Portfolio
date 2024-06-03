@@ -537,7 +537,7 @@ button:hover {
   color: var(--bg-color);
 }
 @media screen and (max-width: 700px) {
-  .eduaction .container {
+  .education .container {
     width: 90%; 
   }
 }
@@ -789,3 +789,4 @@ button:hover {
     grid-template-columns: repeat(1,1fr);
   }
 }
+
