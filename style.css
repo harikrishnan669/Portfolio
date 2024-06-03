@@ -91,7 +91,7 @@ html::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   #menu-icon {
     display: block;
     position: absolute;
@@ -132,7 +132,6 @@ html::-webkit-scrollbar-thumb {
 /*-----------Home----------*/
 section {
   min-height: 100vh;
-  padding: 5rem 9%;
 }
 
 .home {
@@ -144,7 +143,7 @@ section {
 }
 
 .home .home-content h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -154,9 +153,9 @@ span {
 }
 
 .home-content h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .home-img {
@@ -278,7 +277,7 @@ span {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .home {
     gap: 4rem;
   }
@@ -321,13 +320,13 @@ span {
 
 .skills .container .row {
   display: grid;
-  grid-template-columns: repeat(5, 1.75fr);
-  flex-wrap: wrap;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
   gap: 1.8rem;
 }
 .skills .card {
-  width: 130px; 
-  aspect-ratio: 1 / 1.1;
+  width: 100px; 
+  aspect-ratio: 1 / 1;
   border-radius: 8px;
   position: relative;
   cursor: pointer;
@@ -355,6 +354,7 @@ span {
 .skills .card .image-box img {
   max-width: 100%; 
   max-height: 100%;
+  object-fit: cover;
   transition: transform 0.5s ease, filter 0.5s ease;
   opacity: 0.5;
 }
@@ -387,7 +387,7 @@ span {
   letter-spacing: 0.1rem;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .skills .container {
     margin: auto;
     padding: 0;
@@ -406,6 +406,7 @@ span {
 /*----------------Education----------*/
 .education {
   background: var(--bg-color);
+  padding: 50px 0;
 }
 
 .education .timeline {
@@ -417,109 +418,54 @@ span {
 .education .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
+  width: 3px;
   background: rgba(90, 64, 64);
   top: 0;
   bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-  z-index: -2px;
+  left: 0; 
+  margin-left: 0;
+  z-index: 1;
 }
 
 .education .container {
-  padding: 20px 40px;
+  padding: 10px 20px;
   position: relative;
   background-color: inherit;
-  width: 50%;
+  width: 100%; 
+  margin-left: 30px; 
 }
 
 .education .container::after {
   content: '';
   position: absolute;
-  width: 30px;
-  height: 25px;
-  line-height: 25px;
-  right: -17px;
-  background-color: rgb(252, 252, 252);
+  width: 20px;
+  height: 20px;
+  right: auto;
+  left: -20px; /* Position the circle on the left */
+  background-color: var(--bg-color);
   border: 4px solid var(--main-color);
   top: 15px;
   border-radius: 50%;
-  z-index: 100;
-  font-size: 1.89rem;
-  text-align: center;
-  font-weight: 600;
-  font-family: 'Font Awesome 5 Free';
-  color: rgba(90, 64, 64);
-}
-
-.education .left {
-  left: 0;
-}
-
-.education .right {
-  left: 50%;
-}
-
-.education .left::before {
-  content: '';
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
   z-index: 1;
-  right: 30px;
-  border: medium solid var(--main-color);
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent var(--main-color);
-}
-
-.education .right::before {
-  content: '';
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  text-align: center;
-  border: medium solid var(--main-color);
-  border-width: 10px 10px 10px 0;
-  border-color: transparent var(--main-color) transparent transparent;
-}
-
-.education .right::after {
-  left: -16px;
-}
-.education .right::before{
-  left: -16px;
 }
 
 .education .content {
-  background: var(--main-color);
+  padding: 20px 30px;
+  background-color: var(--main-color);
   position: relative;
   border-radius: 6px;
+  z-index: 2;
 }
 
 .education .content .tag {
   font-size: 1.5rem;
-  padding-top: 1.5rem;
-  padding-left: 1.5rem;
+  color: var(--text-color);
+  padding-bottom: 10px;
 }
-.education .content .decs{
-  margin-left: 2rem;
-  padding-bottom: 1rem;
-}
-.education .content .decs h3{
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: left;
-  line-height: 1.5;
-}
-.education .content .decs p{
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: left;
-  line-height: 1.6;
+
+.education .content .decs {
+  font-size: 1rem;
+  color: var(--text-color);
 }
 
 button {
@@ -536,11 +482,23 @@ button:hover {
   background: var(--text-color);
   color: var(--bg-color);
 }
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 600px) {
   .education .container {
-    width: 90%; 
+      width: 100%;
+      margin-left: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+  }
+  .education .timeline::after {
+      left: 15px;
+  }
+  .education .container::after {
+      left: 5px;
   }
 }
+
+
 /*-----------experience-----------*/
 .experience{
   background: var(--second-bg-color);
@@ -584,12 +542,12 @@ button:hover {
 }
 
 .experience .container .bar .info span {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 500;
   margin: 0.5rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
   .experience .container {
     margin: auto;
     padding: 0;
@@ -653,7 +611,7 @@ button:hover {
   margin: 0.5rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
   .projects .container {
     margin: auto;
     padding: 0;
@@ -757,7 +715,7 @@ button:hover {
   display: inline-block;
   padding: 0 15px;
 }
-@media(max-width:700px){
+@media(max-width:500px){
   html{
     font-size: 55%;
   }
@@ -767,7 +725,7 @@ button:hover {
     margin: 0 5rem;
   }
 }
-@media(max-width:700px){
+@media(max-width:500px){
   .header{
     padding: 2rem 3%;
   }
@@ -781,7 +739,7 @@ button:hover {
     padding: 2rem 3%;
   }
 }
-@media (max-width:700){
+@media (max-width:500){
   .services h2{
     margin-bottom: 3rem;
   }
