@@ -747,4 +747,23 @@ button:hover {
     grid-template-columns: repeat(1,1fr);
   }
 }
+/*-------Contact info---------*/
+.contact-info {
+  margin-top: 20px;
+  text-align: center;
+}
 
+.contact-info p {
+  font-size: 16px;
+  color: var(--main-color);
+  margin: 5px 0;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
