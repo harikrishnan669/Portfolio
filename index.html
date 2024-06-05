@@ -238,23 +238,62 @@
                     </div>
                 </div>
             </section>
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="">
-            <div class="input-box">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="phone" placeholder="Phone Number" required>
-                <input type="text" name="subject" placeholder="Subject" required>
-            </div>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-        <div class="contact-info">
-            <p>Email : <a href="mailto:rharikrishnan2020@gmail.com">rharikrishnan2020@gmail.com</a></p>
-            <p>Phone : <a href="9656990468">9656990468</a></p>
-        </div>    
-    </section>
+            <section class="contact" id="contact">
+                <h2 class="heading">Contact <span>Me</span></h2>
+                <form action="" method="post" onsubmit="sendMail(event)">
+                    <div class="input-box">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="text" id="phonenumber" name="phone" placeholder="Phone Number" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <textarea id="message" name="message" cols="30" rows="10" placeholder="Your message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:rharikrishnan2020@gmail.com">rharikrishnan2020@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+919656990468">9656990468</a></p>
+                </div>    
+            </section>
+            
+            <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <script type="text/javascript">
+               (function(){
+                  emailjs.init("gLjba3OfLtOewm34v"); 
+               })();
+            
+               function sendMail(event) {
+                   event.preventDefault(); 
+            
+                   var params = {
+                       name: document.getElementById("name").value,
+                       email: document.getElementById("email").value,
+                       phonenumber: document.getElementById("phonenumber").value,
+                       subject: document.getElementById("subject").value,
+                       message: document.getElementById("message").value
+                   };
+            
+                   const serviceId = "service_r0pijzj";
+                   const templateId = "template_pi0dvtn";
+            
+                   emailjs.send(serviceId, templateId, params)
+                   .then(
+                       res => {
+                           document.getElementById("name").value = "";
+                           document.getElementById("email").value = "";
+                           document.getElementById("phonenumber").value = "";
+                           document.getElementById("subject").value = "";
+                           document.getElementById("message").value = "";
+                           console.log(res);
+                           alert("Message sent successfully");
+                       }
+                   )
+                   .catch((err) => {
+                       console.log(err);
+                       alert("Failed to send message. Please try again later.");
+                   });
+               }
+            </script>            
     <footer class="footer">
         <div class="social">
             <a href="https://www.linkedin.com/in/harikrishnan-r-13a250258/"><i class="fa-brands fa-linkedin"></i></a>
@@ -267,9 +306,9 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <p class="Harikrishnan R"> 
-            
+        <p class="Harikrishnan R">
              @hari_2k4 | Copyright| Things never happen the same way twice
         </p>
     </footer>
