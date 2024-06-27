@@ -548,7 +548,7 @@ button:hover {
   margin: 0.5rem;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .experience .container {
     margin: auto;
     padding: 0;
@@ -573,14 +573,14 @@ button:hover {
   color: var(--text-color);
   border-radius: 1rem;
   padding: 2rem;
-  width: 80%;
+  width: 85%;
   margin: auto;
   margin-top: 2rem;
 }
 
 .projects .container .row {
   display: grid;
-  grid-template-columns: repeat(4, 2fr);
+  grid-template-columns: repeat(4, 1.75fr);
   flex-wrap: wrap;
   gap: 1.8rem;
 }
@@ -614,13 +614,13 @@ button:hover {
 .projects .info a{
   color:#fff;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .projects .container {
     margin: auto;
     padding: 0;
   }
   .projects .container .row {
-    grid-template-columns: repeat(2, 1.5fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: 1rem;
     padding: 2rem 0.2rem 2rem 0.2rem;
     gap: 1rem;
@@ -718,7 +718,7 @@ button:hover {
   display: inline-block;
   padding: 0 15px;
 }
-@media(max-width:500px){
+@media(max-width:600px){
   html{
     font-size: 55%;
   }
@@ -728,7 +728,7 @@ button:hover {
     margin: 0 5rem;
   }
 }
-@media(max-width:500px){
+@media(max-width:600px){
   .header{
     padding: 2rem 3%;
   }
@@ -742,7 +742,7 @@ button:hover {
     padding: 2rem 3%;
   }
 }
-@media (max-width:500){
+@media (max-width:600){
   .services h2{
     margin-bottom: 3rem;
   }
