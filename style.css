@@ -801,6 +801,10 @@ button:hover {
   display: inline-block;
   padding: 0 15px;
 }
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
 @media(max-width:600px){
   html{
     font-size: 55%;
