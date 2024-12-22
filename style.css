@@ -406,10 +406,11 @@ span {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
-  gap: 1.8rem;
+  gap: 1.5rem; /* Reduce gap slightly */
 }
+
 .skills .card {
-  width: 100px; 
+  width: 90px; /* Reduced width */
   aspect-ratio: 1 / 1;
   border-radius: 8px;
   position: relative;
@@ -436,15 +437,15 @@ span {
 }
 
 .skills .card .image-box img {
-  max-width: 100%; 
-  max-height: 100%;
-  object-fit: cover;
+  max-width: 70%; /* Set a fixed width */
+  max-height: 70%; /* Set a fixed height */
+  object-fit: contain; /* Ensure the image fits inside without distortion */
   transition: transform 0.5s ease, filter 0.5s ease;
   opacity: 0.5;
 }
 
 .skills .card:hover .image-box img {
-    transform: translateY(10%);
+  transform: translateY(0); /* Keep the image centered on hover */
   filter: grayscale(1) brightness(0.4);
 }
 
@@ -455,16 +456,16 @@ span {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  opacity: 0; 
-  transition: opacity 0.3s ease-in-out; 
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .skills .card:hover .content {
-  opacity: 1; 
+  opacity: 1; /* Display content on hover */
 }
 
 .skills .card .title {
-  font-size: 1rem;
+  font-size: 0.9rem; /* Adjust font size */
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
@@ -486,7 +487,15 @@ span {
     margin-top: 5px;
     width: 70%;
   }
+  .skills .card {
+    width: 80px; /* Further reduce for smaller screens */
+  }
+  .skills .card .image-box img {
+    max-width: 60%; /* Scale down icons for mobile */
+    max-height: 60%;
+  }
 }
+
 /*----------------Education----------*/
 .education {
   background: var(--bg-color);
@@ -636,21 +645,24 @@ button:hover {
     margin: auto;
     padding: 0;
   }
+
   .experience .container .row {
     grid-template-columns: repeat(2, 1fr);
     margin: 1rem;
     padding: 2rem 0.2rem 2rem 0.2rem;
     gap: 1rem;
   }
+
   .experience .container {
     margin-top: 5px;
     width: 90%;
   }
 }
 /*----------projects--------*/
-.projects{
+.projects {
   background: var(--bg-color);
 }
+
 .projects .container {
   background: #000;
   color: var(--text-color);
@@ -663,18 +675,18 @@ button:hover {
 
 .projects .container .row {
   display: grid;
-  grid-template-columns: repeat(4, 1.75fr);
+  grid-template-columns: repeat(4, 1fr); /* Adjusted proportion for better layout */
   flex-wrap: wrap;
-  gap: 1.8rem;
+  gap: 1.5rem; /* Reduced gap for a tighter look */
 }
 
 .projects .container .bar {
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 1rem;
+  padding: 1.5rem; /* Adjusted padding for better size */
+  border-radius: 0.8rem; /* Slightly reduced border-radius for a clean look */
   background: #000;
   box-shadow: 0 4px 10px var(--main-color);
   transition: 0.3s ease;
+  text-align: center; /* Center content */
 }
 
 .projects .container .bar:hover {
@@ -685,34 +697,53 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 0.8rem; /* Reduced gap for compact layout */
+  margin-top: 0.5rem;
 }
 
 .projects .container .bar .info span {
-  font-size: 3rem;
+  font-size: 1.8rem; /* Adjusted font size */
   font-weight: 500;
   margin: 0.5rem;
 }
-.projects .info a{
-  color:#fff;
+
+.projects .info a {
+  color: #fff;
+  text-decoration: none; /* Remove underline for cleaner look */
+  font-size: 1rem; /* Adjusted font size for better proportion */
 }
+
 @media screen and (max-width: 600px) {
   .projects .container {
     margin: auto;
     padding: 0;
   }
+
   .projects .container .row {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Adjusted for smaller screens */
     margin: 1rem;
-    padding: 2rem 0.2rem 2rem 0.2rem;
+    padding: 1rem 0.5rem;
     gap: 1rem;
   }
+
   .projects .container {
     margin-top: 5px;
     width: 90%;
   }
+
+  .projects .container .bar {
+    padding: 1rem; /* Reduced padding for smaller cards */
+  }
+
+  .projects .container .bar .info span {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  .projects .info a {
+    font-size: 0.9rem; /* Adjusted for mobile screens */
+  }
 }
+
 /*-----------Contacts--------*/
 .contact{
   background: var(--second-bg-color);
@@ -804,6 +835,8 @@ button:hover {
 .footer p {
     margin: 0;
     font-size: 0.9rem;
+    text-align: center;
+  padding-top: 1rem;
 }
 @media(max-width:600px){
   html{
