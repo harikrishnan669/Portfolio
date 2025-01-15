@@ -22,7 +22,6 @@ html {
   font-size: 50%;
   overflow-x: hidden;
 }
-
 body {
   background: var(--bg-color);
   font-family: 'Poppins', sans-serif;
@@ -134,7 +133,6 @@ html::-webkit-scrollbar-thumb {
   z-index: 100;
   justify-content: space-between;
 }
-
 .logo {
   font-size: 3rem;
   color: var(--main-color);
