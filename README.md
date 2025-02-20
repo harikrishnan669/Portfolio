@@ -1,6 +1,6 @@
-## My personal portfolio website: https://portfolio-qbuy2og4h-r-harikrishnans-projects.vercel.app/
+### My personal portfolio website: https://portfolio-qbuy2og4h-r-harikrishnans-projects.vercel.app/
 
-My simple portfolio website build using HTML,CSS & JavaScript.
+My simple portfolio website build using HTML,CSS & JavaScript inorder to show my skills,projects and my experiences
 
 | Desktop | Mobile |
 |--|--|
