@@ -1,6 +1,6 @@
 ### My personal portfolio website: https://hari2k4.vercel.app/
 
-My simple portfolio website build using HTML,CSS & JavaScript inorder to show my skills,projects and my experiences
+My simple portfolio website build using HTML,CSS & JavaScript inorder to show my skills,projects and my experiences.
 
 | Desktop | Mobile |
 |--|--|
