@@ -395,7 +395,7 @@ span {
   color: var(--text-color);
   border-radius: 1rem;
   padding: 2rem;
-  width: 75%;
+  width: 70%;
   margin: auto;
   margin-top: 2rem;
 }
@@ -435,15 +435,15 @@ span {
 }
 
 .skills .card .image-box img {
-  max-width: 70%; /* Set a fixed width */
-  max-height: 70%; /* Set a fixed height */
-  object-fit: contain; /* Ensure the image fits inside without distortion */
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
   transition: transform 0.5s ease, filter 0.5s ease;
   opacity: 0.5;
 }
 
 .skills .card:hover .image-box img {
-  transform: translateY(0); /* Keep the image centered on hover */
+  transform: translateY(0);
   filter: grayscale(1) brightness(0.4);
 }
 
@@ -459,11 +459,11 @@ span {
 }
 
 .skills .card:hover .content {
-  opacity: 1; /* Display content on hover */
+  opacity: 1;
 }
 
 .skills .card .title {
-  font-size: 0.9rem; /* Adjust font size */
+  font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
@@ -483,13 +483,13 @@ span {
   }
   .skills .container {
     margin-top: 5px;
-    width: 70%;
+    width: 80%;
   }
   .skills .card {
-    width: 80px; /* Further reduce for smaller screens */
+    width: 80px;
   }
   .skills .card .image-box img {
-    max-width: 60%; /* Scale down icons for mobile */
+    max-width: 60%;
     max-height: 60%;
   }
 }
@@ -532,7 +532,7 @@ span {
   width: 20px;
   height: 20px;
   right: auto;
-  left: -20px; /* Position the circle on the left */
+  left: -20px;
   background-color: var(--bg-color);
   border: 4px solid var(--main-color);
   top: 15px;
