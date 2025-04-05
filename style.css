@@ -542,7 +542,7 @@ span {
 
 .education .content {
   padding: 20px 30px;
-  background-color: var(--main-color);
+  background-color: #ffffff;
   position: relative;
   border-radius: 6px;
   z-index: 2;
@@ -550,7 +550,7 @@ span {
 
 .education .content .tag {
   font-size: 1.5rem;
-  color: var(--text-color);
+  color: #000000;
   padding-bottom: 10px;
 }
 
@@ -673,18 +673,18 @@ button:hover {
 
 .projects .container .row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Adjusted proportion for better layout */
+  grid-template-columns: repeat(4, 1fr);
   flex-wrap: wrap;
-  gap: 1.5rem; /* Reduced gap for a tighter look */
+  gap: 1.5rem;
 }
 
 .projects .container .bar {
-  padding: 1.5rem; /* Adjusted padding for better size */
-  border-radius: 0.8rem; /* Slightly reduced border-radius for a clean look */
+  padding: 1.5rem;
+  border-radius: 0.8rem;
   background: #000;
   box-shadow: 0 4px 10px var(--main-color);
   transition: 0.3s ease;
-  text-align: center; /* Center content */
+  text-align: center;
 }
 
 .projects .container .bar:hover {
@@ -695,20 +695,20 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem; /* Reduced gap for compact layout */
+  gap: 0.8rem;
   margin-top: 0.5rem;
 }
 
 .projects .container .bar .info span {
-  font-size: 1.8rem; /* Adjusted font size */
+  font-size: 1.8rem;
   font-weight: 500;
   margin: 0.5rem;
 }
 
 .projects .info a {
   color: #fff;
-  text-decoration: none; /* Remove underline for cleaner look */
-  font-size: 1rem; /* Adjusted font size for better proportion */
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -718,7 +718,7 @@ button:hover {
   }
 
   .projects .container .row {
-    grid-template-columns: repeat(2, 1fr); /* Adjusted for smaller screens */
+    grid-template-columns: repeat(2, 1fr);
     margin: 1rem;
     padding: 1rem 0.5rem;
     gap: 1rem;
@@ -730,15 +730,15 @@ button:hover {
   }
 
   .projects .container .bar {
-    padding: 1rem; /* Reduced padding for smaller cards */
+    padding: 1rem;
   }
 
   .projects .container .bar .info span {
-    font-size: 1.5rem; /* Smaller font size for smaller screens */
+    font-size: 1.5rem;
   }
 
   .projects .info a {
-    font-size: 0.9rem; /* Adjusted for mobile screens */
+    font-size: 0.9rem;
   }
 }
 
