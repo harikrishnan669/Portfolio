@@ -240,7 +240,7 @@ span {
 }
 
 .home-img {
-  border-radius: 40%;
+  border-radius: 50%;
 }
 
 .home-img img {
@@ -249,6 +249,7 @@ span {
   border-radius: 50%;
   box-shadow: 0 0 25px var(--main-color);
   cursor: pointer;
+  object-fit: cover;
 }
 
 .home-img img:hover {
