@@ -36,78 +36,6 @@ body {
   height: 100%;
   overflow: hidden;
 }
-
-.box div {
-  position: absolute;
-  width: 60px;
-  height: 80px;
-  background: transparent;
-  border: 6px solid white;
-}
-
-.box div:nth-child(1) {
-  top: 12%;
-  left: 42%;
-  animation: animate 10s linear infinite;
-}
-.box div:nth-child(2) {
-  top: 70%;
-  left: 50%;
-  animation: animate 7s linear infinite;
-}
-.box div:nth-child(3) {
-  top: 17%;
-  left: 6%;
-  animation: animate 9s linear infinite;
-}
-.box div:nth-child(4) {
-  top: 20%;
-  left: 60%;
-  animation: animate 10s linear infinite;
-}
-.box div:nth-child(5) {
-  top: 67%;
-  left: 10%;
-  animation: animate 6s linear infinite;
-}
-.box div:nth-child(6) {
-  top: 80%;
-  left: 70%;
-  animation: animate 12s linear infinite;
-}
-.box div:nth-child(7) {
-  top: 60%;
-  left: 80%;
-  animation: animate 15s linear infinite;
-}
-.box div:nth-child(8) {
-  top: 67%;
-  left: 10%;
-  animation: animate 6s linear infinite;
-}
-.box div:nth-child(9) {
-  top: 80%;
-  left: 70%;
-  animation: animate 12s linear infinite;
-}
-.box div:nth-child(10) {
-  top: 20%;
-  left: 70%;
-  animation: animate 12s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-    transform: scale(0) translateY(0) rotate(0);
-    opacity: 0.1;
-  }
-  100% {
-    transform: scale(1.3) translateY(-90px) rotate(360deg);
-    opacity: 0.1;
-  }
-}
-
-
 html::-webkit-scrollbar {
   width: 0.8rem;
 }
@@ -220,8 +148,27 @@ section {
   justify-content: center;
   align-items: center;
   gap: 8rem;
+  position: relative;
+  z-index: 1;
   background: var(--bg-color);
+  overflow: hidden;
+  min-height: 100vh;
 }
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("./Icons/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+
 
 .home .home-content h1 {
   font-size: 4rem;
@@ -296,68 +243,28 @@ span {
   transition: 0.3s ease;
   cursor: pointer;
 }
-
-.btn:hover {
-  transform: scale(1.03);
-  background-color: var(--main-color);
-  color: black;
-  box-shadow: 0 0 25px var(--main-color);
-}
-
-.typing-text span {
+.typing-text {
+  font-size: 24px;
+  font-family: monospace;
+  color: white; /* Force white text */
   position: relative;
+  display: inline-block;
+  padding-right: 8px; /* maintains gap from cursor */
 }
 
-.typing-text span::before {
-  content: 'Computer Science Undergraduate';
-  color: var(--main-color);
-  animation: words 10s infinite; 
-}
-
-.typing-text span::after{
+.typing-text::after {
   content: '';
-  background: var(--bg-color);
-  width: calc(100% + 8px);
+  position: absolute;
+  right: 0;
+  width: 2px;
   height: 100%;
-  border-left: 3px solid var(--bg-color);
-  right: -8px;
-  animation: cursor 0.6s infinite, typing 10s steps(14) infinite;
-}
-@keyframes cursor {
-  to {
-    border-left: 3px solid var(--main-color);
-  }
+  background-color: white; /* make cursor same color as text */
+  animation: blink 0.7s infinite;
 }
 
-@keyframes words {
-  0%, 21% {
-    content: 'Computer Science Undergraduate';
-  }
-  21%, 40% {
-    content: 'Designer';
-  }
-  41%, 60% {
-    content: 'Computer Science Undergraduate';
-  }
-  61%, 80% {
-    content: 'Designer';
-  }
-
-}
-@keyframes typing {
-  10%, 15%,
-  30%, 35%,
-  50%, 55%,
-  70%, 75%,
-  90%, 95% {
-    width: 0;
-  }
-  5%, 20%,
-  25%, 40%,
-  45%, 60%,
-  65%, 80%, 85% {
-    width: calc(100% + 8px);
-  }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 @media (max-width: 500px) {
