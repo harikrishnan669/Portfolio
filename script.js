@@ -23,7 +23,7 @@
             });
         });
     });
-  const words = ['Computer Science Undergraduate', 'Designer'];
+  const words = ['Computer Science Undergraduate', 'A Graphic Designer'];
        let wordIndex = 0;
        let charIndex = 0;
        const typingElement = document.getElementById('typed-text');

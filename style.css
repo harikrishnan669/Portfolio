@@ -156,30 +156,27 @@ section {
 }
 .home::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-image: url("./Icons/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.1;
   z-index: -1;
+  pointer-events: none;
 }
-
-
 .home .home-content h1 {
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.3;
 }
-
 span {
   color: var(--main-color);
 }
-
 .home-content h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -189,7 +186,6 @@ span {
 .home-img {
   border-radius: 50%;
 }
-
 .home-img img {
   position: relative;
   width: 22vw;
@@ -246,10 +242,10 @@ span {
 .typing-text {
   font-size: 24px;
   font-family: monospace;
-  color: white; /* Force white text */
+  color: var(--main-color);
   position: relative;
   display: inline-block;
-  padding-right: 8px; /* maintains gap from cursor */
+  padding-right: 8px;
 }
 
 .typing-text::after {
@@ -258,7 +254,7 @@ span {
   right: 0;
   width: 2px;
   height: 100%;
-  background-color: white; /* make cursor same color as text */
+  background-color: var(--bg-color);
   animation: blink 0.7s infinite;
 }
 
@@ -503,8 +499,8 @@ button:hover {
   background: var(--second-bg-color);
 }
 .experience .container {
-  background: #000;
-  color: var(--text-color);
+  background: #000000;
+  color: var(--bg-color);
   border-radius: 1rem;
   padding: 2rem;
   width: 85%;
@@ -523,7 +519,7 @@ button:hover {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 1rem;
-  background: #000;
+  background: #ffffff;
   box-shadow: 0 4px 10px var(--main-color);
   transition: 0.3s ease;
 }
@@ -570,7 +566,7 @@ button:hover {
 }
 
 .projects .container {
-  background: #000;
+  background: #ffffff;
   color: var(--text-color);
   border-radius: 1rem;
   padding: 2rem;
