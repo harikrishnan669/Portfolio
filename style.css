@@ -499,8 +499,8 @@ button:hover {
   background: var(--second-bg-color);
 }
 .experience .container {
-  background: #000000;
-  color: var(--bg-color);
+  background: #ffffff;
+  color: var(--text-color);
   border-radius: 1rem;
   padding: 2rem;
   width: 85%;
@@ -519,7 +519,7 @@ button:hover {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 1rem;
-  background: #ffffff;
+  background: #000000;
   box-shadow: 0 4px 10px var(--main-color);
   transition: 0.3s ease;
 }
@@ -537,8 +537,8 @@ button:hover {
 }
 
 .experience .container .bar .info span {
-  font-size: 4rem;
-  font-weight: 500;
+  font-size: 5rem;
+  font-weight: 700;
   margin: 0.5rem;
 }
 
