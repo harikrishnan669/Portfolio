@@ -495,29 +495,30 @@ button:hover {
 
 
 /*-----------experience-----------*/
-.experience{
+.experience {
   background: var(--second-bg-color);
+  padding: 2rem 0;
 }
+
 .experience .container {
   background: #ffffff;
   color: var(--text-color);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 2rem;
-  width: 85%;
+  width: 90%;
   margin: auto;
   margin-top: 2rem;
+  box-sizing: border-box;
 }
 
 .experience .container .row {
   display: grid;
-  grid-template-columns: repeat(4, 1.75fr);
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.8rem;
 }
 
 .experience .container .bar {
-  margin-bottom: 10px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 1rem;
   background: #000000;
   box-shadow: 0 4px 10px var(--main-color);
@@ -534,55 +535,93 @@ button:hover {
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
+  text-align: center;
 }
 
-.experience .container .bar .info span {
-  font-size: 5rem;
-  font-weight: 700;
-  margin: 0.5rem;
+.experience .container .bar .info h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin: 0;
 }
 
+.experience .container .bar .info h4 {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin: 0;
+}
+
+.experience .container .bar .info p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #ddd;
+  margin: 0 1rem;
+}
+
+/* Responsive tweaks for small screens */
 @media screen and (max-width: 600px) {
   .experience .container {
-    margin: auto;
-    padding: 0;
+    padding: 1rem;
+    width: 95%;
+    margin-top: 1rem;
   }
 
   .experience .container .row {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 1rem;
-    padding: 2rem 0.2rem 2rem 0.2rem;
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 
-  .experience .container {
-    margin-top: 5px;
-    width: 90%;
+  .experience .container .bar .info h3 {
+    font-size: 1.4rem;
+  }
+
+  .experience .container .bar .info h4 {
+    font-size: 1rem;
+  }
+
+  .experience .container .bar .info p {
+    font-size: 1rem;
   }
 }
+
 /*----------projects--------*/
 .projects {
   background: var(--bg-color);
+  padding: 2rem 1rem;
 }
 
 .projects .container {
   background: #ffffff;
   color: var(--text-color);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 2rem;
-  width: 85%;
+  width: 80%;
   margin: auto;
   margin-top: 2rem;
+  box-sizing: border-box;
 }
 
-.projects .container .row {
+.projects .container h2,
+.projects .container h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.projects .container p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.projects .row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
-.projects .container .bar {
+.projects .bar {
   padding: 1.5rem;
   border-radius: 0.8rem;
   background: #000;
@@ -591,11 +630,11 @@ button:hover {
   text-align: center;
 }
 
-.projects .container .bar:hover {
+.projects .bar:hover {
   box-shadow: 0 4px 20px var(--main-color);
 }
 
-.projects .container .bar .info {
+.projects .bar .info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -603,7 +642,7 @@ button:hover {
   margin-top: 0.5rem;
 }
 
-.projects .container .bar .info span {
+.projects .bar .info span {
   font-size: 1.8rem;
   font-weight: 500;
   margin: 0.5rem;
@@ -615,34 +654,37 @@ button:hover {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 600px) {
-  .projects .container {
-    margin: auto;
-    padding: 0;
-  }
-
-  .projects .container .row {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 1rem;
-    padding: 1rem 0.5rem;
-    gap: 1rem;
-  }
-
-  .projects .container {
-    margin-top: 5px;
-    width: 90%;
-  }
-
-  .projects .container .bar {
+/* Responsive for small devices */
+@media screen and (max-width: 768px) {
+  .projects {
     padding: 1rem;
   }
 
-  .projects .container .bar .info span {
+  .projects .container {
+    padding: 1.5rem;
+    width: 95%;
+    margin-top: 1rem;
+  }
+
+  .projects .container h2,
+  .projects .container h3 {
     font-size: 1.5rem;
   }
 
+  .projects .container p {
+    font-size: 1rem;
+  }
+
+  .projects .bar {
+    padding: 1rem;
+  }
+
+  .projects .bar .info span {
+    font-size: 1.4rem;
+  }
+
   .projects .info a {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -792,4 +834,5 @@ button:hover {
 .contact-info a:hover {
   text-decoration: underline;
 }
+
 
