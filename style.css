@@ -53,9 +53,8 @@ html::-webkit-scrollbar-thumb {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 3rem 9%;
+  padding: 0.5rem;
   background: rgba(0, 0, 0, 0.7);
-
   display: flex;
   align-items: center;
   z-index: 100;
@@ -71,7 +70,7 @@ html::-webkit-scrollbar-thumb {
   gap: 0.5rem;
 }
 .logo-img {
-  max-height: 100px;
+  max-height: 80px;
   width: auto;
   object-fit: contain;
 }
@@ -81,7 +80,7 @@ html::-webkit-scrollbar-thumb {
 .navbar {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 3px 20px;
   height: auto;
 }
 .navbar a {
