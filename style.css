@@ -307,7 +307,7 @@ span {
 .skills .container .row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 2.5rem;
+  gap: 3rem;
   justify-content: center;
   padding: 1rem 0;
 }
