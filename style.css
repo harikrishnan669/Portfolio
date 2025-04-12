@@ -290,108 +290,110 @@ span {
 /*------------Skills-----------*/
 .skills {
   background: var(--second-bg-color);
+  padding: 3rem 0;
 }
+
 .skills .container {
-  background: #000;
+  background: #111; /* Slightly lighter than pure black */
   color: var(--text-color);
-  border-radius: 1rem;
-  padding: 2rem;
-  width: 70%;
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  width: 80%;
   margin: auto;
-  margin-top: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
 }
 
 .skills .container .row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
   justify-content: center;
-  gap: 1.5rem; /* Reduce gap slightly */
+  padding: 1rem 0;
 }
 
 .skills .card {
-  width: 90px; /* Reduced width */
-  aspect-ratio: 1 / 1;
-  border-radius: 8px;
-  position: relative;
-  cursor: pointer;
+  background: #1c1c1c;
+  border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  position: relative;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 2px solid transparent;
 }
 
 .skills .card:hover {
-  transform: scale(1.1);
-  z-index: 10;
+  transform: translateY(-8px) scale(1.05);
   border: 2px solid var(--main-color);
+  box-shadow: 0 8px 20px rgba(0, 255, 200, 0.2);
 }
 
 .skills .card .image-box {
-  height: 60%;
-  width: 100%;
-  position: relative;
+  height: 60px;
+  width: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .skills .card .image-box img {
-  max-width: 70%;
-  max-height: 70%;
-  object-fit: contain;
-  transition: transform 0.5s ease, filter 0.5s ease;
-  opacity: 0.5;
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: grayscale(100%) opacity(0.7);
 }
 
 .skills .card:hover .image-box img {
-  transform: translateY(0);
-  filter: grayscale(1) brightness(0.4);
+  transform: scale(1.1);
+  filter: grayscale(0%) opacity(1);
 }
 
 .skills .card .content {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.skills .card:hover .content {
-  opacity: 1;
 }
 
 .skills .card .title {
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 0.95rem;
+  font-weight: 600;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1px;
 }
 
-@media screen and (max-width: 600px) {
+/* Responsive styles */
+@media screen and (max-width: 768px) {
   .skills .container {
-    margin: auto;
-    padding: 0;
+    width: 90%;
+    padding: 2rem 1rem;
   }
+
   .skills .container .row {
     grid-template-columns: repeat(3, 1fr);
-    margin: 1rem;
-    padding: 2rem 0.2rem 2rem 0.2rem;
     gap: 1rem;
   }
-  .skills .container {
-    margin-top: 5px;
-    width: 80%;
-  }
+
   .skills .card {
-    width: 80px;
+    padding: 0.8rem;
   }
-  .skills .card .image-box img {
-    max-width: 60%;
-    max-height: 60%;
+
+  .skills .card .image-box {
+    height: 50px;
+    width: 50px;
+  }
+
+  .skills .card .title {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills .container .row {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
