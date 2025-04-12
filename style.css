@@ -71,8 +71,8 @@ html::-webkit-scrollbar-thumb {
   gap: 0.5rem;
 }
 .logo-img {
-  max-height: 100px; /* Limits image height */
-  width: auto;       /* Keeps aspect ratio */
+  max-height: 100px;
+  width: auto;
   object-fit: contain;
 }
 .logo:hover {
@@ -81,7 +81,8 @@ html::-webkit-scrollbar-thumb {
 .navbar {
   display: flex;
   align-items: center;
-  height: 4px;
+  padding: 10px 20px;
+  height: auto;
 }
 .navbar a {
   font-size: 1.8rem;
@@ -96,7 +97,6 @@ html::-webkit-scrollbar-thumb {
   color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
 }
-/* Menu icon */
 #menu-icon {
   font-size: 3.6rem;
   color: var(--main-color);
@@ -104,51 +104,46 @@ html::-webkit-scrollbar-thumb {
   cursor: pointer;
   padding-left: 3rem;
 }
-/* Hide the menu icon when the navbar is active */
 #menu-icon.hidden {
   display: none;
 }
-
-/* Mobile View */
 @media (max-width: 500px) {
   #menu-icon {
     display: block;
     position: absolute;
-    right: 5%; /* Adjusted right margin for better spacing */
+    right: 5%;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    z-index: 1001; /* Ensure it's clickable above everything */
+    z-index: 1001;
   }
 
   .navbar {
-    position: fixed; /* Changed to fixed for better consistency */
-    top: 0; /* Start from the top of the screen */
-    right: -100%; /* Hidden off-screen by default */
-    width: 50%; /* Adjusted width for better usability */
-    height: 80vh; /* Full-screen height */
-    padding: 4rem 2rem 2rem; /* Added more padding to make it more spacious */
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 80vh;
+    padding: 4rem 2rem 2rem;
     background-color: black;
     transition: right 0.3s ease-in-out;
     z-index: 1000;
     display: flex;
     flex-direction: column;
   }
-
   .navbar.active {
-    right: 0; /* Slides in when active */
+    right: 0;
   }
-
   .navbar a {
     display: block;
-    font-size: 2rem; /* Increased font size for better readability */
-    margin: 1.5rem 0; /* Reduced margin for a more compact design */
-    color: white; /* White text for better visibility */
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    color: white;
     text-align: left;
-    padding: 0.5rem 1rem; /* Added padding for better spacing */
+    padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    background-color: transparent; /* Transparent background for links */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
   }
 
   .navbar a:hover,
