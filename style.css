@@ -122,8 +122,8 @@ html::-webkit-scrollbar-thumb {
     top: 0;
     right: -100%;
     width: 50%;
-    height: 80vh;
-    padding: 4rem 2rem 2rem;
+    height: 65vh;
+    padding: 3rem 1rem 1rem;
     background-color: black;
     transition: right 0.3s ease-in-out;
     z-index: 1000;
