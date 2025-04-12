@@ -181,12 +181,12 @@ span {
 
 .home-img {
   border-radius: 70%;
-  padding-left: 2.5rem;
+  padding-left: 1.5rem;
 }
 .home-img img {
   position: relative;
   width: 22vw;
-  border-radius: 50%;
+  border-radius: 80%;
   box-shadow: 0 0 25px var(--main-color);
   cursor: pointer;
   object-fit: cover;
