@@ -62,20 +62,26 @@ html::-webkit-scrollbar-thumb {
   justify-content: space-between;
 }
 .logo {
-  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
   color: var(--main-color);
-  font-weight: 800;
-  cursor: pointer;
-  transition: 0.5s ease;
+  text-decoration: none;
+  gap: 0.5rem;
 }
-
+.logo-img {
+  max-height: 100px; /* Limits image height */
+  width: auto;       /* Keeps aspect ratio */
+  object-fit: contain;
+}
 .logo:hover {
   transform: scale(1.1);
 }
-
 .navbar {
   display: flex;
   align-items: center;
+  height: 4px;
 }
 .navbar a {
   font-size: 1.8rem;
@@ -90,50 +96,67 @@ html::-webkit-scrollbar-thumb {
   color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
 }
+/* Menu icon */
 #menu-icon {
   font-size: 3.6rem;
   color: var(--main-color);
   display: none;
   cursor: pointer;
+  padding-left: 3rem;
 }
+/* Hide the menu icon when the navbar is active */
+#menu-icon.hidden {
+  display: none;
+}
+
+/* Mobile View */
 @media (max-width: 500px) {
   #menu-icon {
     display: block;
     position: absolute;
-    right: 3%;
+    right: 5%; /* Adjusted right margin for better spacing */
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's clickable above everything */
   }
 
   .navbar {
-    position: relative;
-    top: 100%;
-    right: 100%;
-    width: 40%;
-    padding: 1rem 3%;
-    background-color: var(--second-bg-color);
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.4);
-    display: none;
+    position: fixed; /* Changed to fixed for better consistency */
+    top: 0; /* Start from the top of the screen */
+    right: -100%; /* Hidden off-screen by default */
+    width: 50%; /* Adjusted width for better usability */
+    height: 80vh; /* Full-screen height */
+    padding: 4rem 2rem 2rem; /* Added more padding to make it more spacious */
+    background-color: black;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
   }
 
   .navbar.active {
-    right: 0;
-    display: block;
+    right: 0; /* Slides in when active */
   }
 
   .navbar a {
     display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
+    font-size: 2rem; /* Increased font size for better readability */
+    margin: 1.5rem 0; /* Reduced margin for a more compact design */
+    color: white; /* White text for better visibility */
+    text-align: left;
+    padding: 0.5rem 1rem; /* Added padding for better spacing */
+    border-radius: 0.5rem;
+    background-color: transparent; /* Transparent background for links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
   }
 
   .navbar a:hover,
   .navbar a.active {
-    padding: 1rem;
-    border-radius: 0.5rem;
+
+    color: var(--main-color);
   }
 }
-
 /*-----------Home----------*/
 section {
   min-height: 100vh;

@@ -1,18 +1,21 @@
+const menuIcon = document.getElementById('menu-icon');
+const navbar = document.querySelector('.navbar');
 
-       document.addEventListener('DOMContentLoaded', function () {
-    const menuIcon = document.getElementById('menu-icon');
-    const navbar = document.querySelector('.navbar');
-  
-    menuIcon.addEventListener('click', () => {
-      navbar.classList.toggle('active');
-    });
-    document.addEventListener('click', (event) => {
-      if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) {
+menuIcon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navbar.classList.toggle('active');
+    menuIcon.classList.toggle('hidden');
+});
+
+// Add event listener to document to close the menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !menuIcon.contains(e.target)) {
         navbar.classList.remove('active');
-      }
-    });
-  });
-  document.addEventListener('DOMContentLoaded', function () {
+        menuIcon.classList.remove('hidden');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
         const readMoreButtons = document.querySelectorAll('.readMoreBtn');
         readMoreButtons.forEach(button => {
             button.addEventListener('click', function () {
