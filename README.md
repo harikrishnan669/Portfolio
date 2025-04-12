@@ -4,7 +4,9 @@ My simple portfolio website build using HTML,CSS & JavaScript inorder to show my
 
 | Desktop | Mobile |
 |--|--|
-| ![Screenshot 2024-12-22 204027](https://github.com/user-attachments/assets/7ea50962-0ade-485b-bf0c-a82e39411271) | ![WhatsApp Image 2024-12-22 at 20 43 44_6704ec6b](https://github.com/user-attachments/assets/1732e79c-7c45-4940-8aa3-ba8cb7d2ddf2)
-| ![Screenshot 2024-12-22 204144](https://github.com/user-attachments/assets/24e240b9-877f-4155-bbe4-ba111f88b60a) | ![WhatsApp Image 2024-12-22 at 20 43 44_47a21e37](https://github.com/user-attachments/assets/9311b5ae-27ad-4734-8233-06fecb21b606)
+|![Screenshot 2025-04-12 233758](https://github.com/user-attachments/assets/91715c17-3477-4c3d-862c-6af245d935e2) |![WhatsApp Image 2025-04-13 at 00 01 19_1cbb5609](https://github.com/user-attachments/assets/bdf5b57d-3d3d-4abc-b6f3-985a0953bb09)|
+|![Screenshot 2025-04-12 233820](https://github.com/user-attachments/assets/b683d3a3-49f4-4c9e-a071-1afb6428741f) |![WhatsApp Image 2025-04-13 at 00 01 20_cf9ef7d3](https://github.com/user-attachments/assets/dc0d11f2-226e-468d-bab6-507325fd9b30)|
+|![Screenshot 2025-04-12 233930](https://github.com/user-attachments/assets/ff668e98-de8b-4213-b05b-c5f98917d1cc) |![WhatsApp Image 2025-04-13 at 00 01 20_92639a97](https://github.com/user-attachments/assets/60150b10-19f0-49d2-81ea-e781b17c6e3f)|
+
 
 ### <div align="center"> Drop a ⭐ if you like the repository</div>
