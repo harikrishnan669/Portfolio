@@ -50,3 +50,13 @@
        }
 
        document.addEventListener('DOMContentLoaded', type);
+       const navLinks = document.querySelectorAll('.navbar a');
+
+       navLinks.forEach(link => {
+           link.addEventListener('click', () => {
+               // Remove 'active' from all links
+               navLinks.forEach(nav => nav.classList.remove('active'));
+               // Add 'active' to the clicked link
+               link.classList.add('active');
+           });
+       });
