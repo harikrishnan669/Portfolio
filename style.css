@@ -73,6 +73,7 @@ html::-webkit-scrollbar-thumb {
   max-height: 80px;
   width: auto;
   object-fit: contain;
+  margin-right: -25px;
 }
 .logo:hover {
   transform: scale(1.1);
