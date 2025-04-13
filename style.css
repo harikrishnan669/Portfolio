@@ -192,7 +192,7 @@ section {
   line-height: 1.3;
 }
 span {
-  color: gray;
+  color: #65D9ff;
 }
 .home-content h3 {
   font-size: 2rem;
@@ -434,7 +434,7 @@ span {
   content: '';
   position: absolute;
   width: 3px;
-  background: white;
+  background: #65D9ff;
   top: 0;
   bottom: 0;
   left: 0;
