@@ -68,12 +68,13 @@ html::-webkit-scrollbar-thumb {
   color: var(--main-color);
   text-decoration: none;
   gap: 0.5rem;
+  margin-left: 5px;
 }
 .logo-img {
   max-height: 80px;
   width: auto;
   object-fit: contain;
-  margin-right: -25px;
+  margin-right: -18px;
 }
 .logo:hover {
   transform: scale(1.1);
