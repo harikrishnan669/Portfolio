@@ -434,10 +434,10 @@ span {
   content: '';
   position: absolute;
   width: 3px;
-  background: rgba(90, 64, 64);
+  background: white;
   top: 0;
   bottom: 0;
-  left: 0; 
+  left: 0;
   margin-left: 0;
   z-index: 1;
 }
@@ -446,8 +446,8 @@ span {
   padding: 10px 20px;
   position: relative;
   background-color: inherit;
-  width: 100%; 
-  margin-left: 30px; 
+  width: 100%;
+  margin-left: 30px;
 }
 
 .education .container::after {
@@ -512,8 +512,6 @@ button:hover {
       left: 5px;
   }
 }
-
-
 /*-----------experience-----------*/
 .experience {
   background: var(--second-bg-color);
