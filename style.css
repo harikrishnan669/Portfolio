@@ -244,8 +244,8 @@ span {
   background: var(--main-color);
   box-shadow: 0 0 25px var(--main-color);
 }
-
 .btn {
+  position: relative;
   display: inline-block;
   padding: 1rem 2.8rem;
   background: var(--bg-color);
@@ -256,6 +256,54 @@ span {
   letter-spacing: 0.1rem;
   transition: 0.3s ease;
   cursor: pointer;
+  overflow: hidden;
+}
+.btn:hover {
+  color: black;
+  transform: scale(1.05);
+  background: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+}
+.btn::before,
+.btn::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #fff 40%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  filter: blur(2px);
+  transform: scale(0.5);
+}
+.btn:hover::before {
+  top: 30%;
+  left: 20%;
+  animation: magicSparkle 0.8s ease-out;
+}
+
+.btn:hover::after {
+  top: 70%;
+  left: 80%;
+  animation: magicSparkle 0.8s ease-out 0.2s;
+}
+@keyframes magicSparkle {
+  0% {
+    transform: scale(0.5) translateY(0);
+    opacity: 1;
+    box-shadow: 0 0 5px 2px #fff;
+  }
+  50% {
+    transform: scale(1.2) translateY(-10px);
+    opacity: 0.8;
+    box-shadow: 0 0 15px 6px #fff;
+  }
+  100% {
+    transform: scale(0.2) translateY(-25px);
+    opacity: 0;
+    box-shadow: none;
+  }
 }
 .typing-text {
   font-size: 24px;
@@ -286,7 +334,6 @@ span {
     gap: 4rem;
   }
 }
-
 @media (max-width: 900px) {
   .home {
     flex-direction: column;
@@ -315,7 +362,7 @@ span {
 }
 
 .skills .container {
-  background: #111; /* Slightly lighter than pure black */
+  background: #111;
   color: var(--text-color);
   border-radius: 1.5rem;
   padding: 3rem 2rem;
