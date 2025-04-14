@@ -797,8 +797,9 @@ button:hover {
   position: relative;
   bottom: 0;
   width: 100%;
-  padding: 40px;
+  padding: 15px;
   background-color: var(--main-color);
+  justify-content: space-between;
 }
 .footer .social{
   text-align: center;
