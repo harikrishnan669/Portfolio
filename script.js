@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
-  const words = ['Computer Science Undergraduate', 'A Graphic Designer'];
+  const words = ['Computer Science Undergraduate', 'A Graphic Designer','Web Development','UI/UX Designing'];
        let wordIndex = 0;
        let charIndex = 0;
        const typingElement = document.getElementById('typed-text');
