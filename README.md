@@ -4,7 +4,8 @@ My simple portfolio website build using HTML,CSS & JavaScript inorder to show my
 <p align="center">
 	<img src="https://img.shields.io/badge/Platform-Web%2C%20Mobile-brightgreen" alt="Platform-Web">
     <img src="https://img.shields.io/badge/Tech%20Stack-HTML%2C%20CSS%2C%20Javascript%2C%20Emailjs-9cf" alt="Tech-Stack">
-</p
+</p>
+
 
 | Desktop | Mobile |
 |--|--|
