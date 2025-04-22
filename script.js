@@ -7,7 +7,6 @@ menuIcon.addEventListener('click', (e) => {
     menuIcon.classList.toggle('hidden');
 });
 
-// Add event listener to document to close the menu when clicking outside
 document.addEventListener('click', (e) => {
     if (!navbar.contains(e.target) && !menuIcon.contains(e.target)) {
         navbar.classList.remove('active');
@@ -57,9 +56,7 @@ const navLinks = document.querySelectorAll('.navbar a');
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        // Remove 'active' from all links
         navLinks.forEach(nav => nav.classList.remove('active'));
-        // Add 'active' to the clicked link
         link.classList.add('active');
     });
 });
@@ -67,10 +64,10 @@ const closeIcon = document.getElementById("close-icon");
 
 menuIcon.addEventListener("click", () => {
     navbar.classList.add("active");
-    menuIcon.style.display = "none"; // Hide menu icon
+    menuIcon.style.display = "none";
 });
 
 closeIcon.addEventListener("click", () => {
     navbar.classList.remove("active");
-    menuIcon.style.display = "block"; // Show menu icon again
+    menuIcon.style.display = "block";
 });
