@@ -494,6 +494,7 @@ span {
 }
 
 /*----------------Education----------*/
+
 .education {
   background: var(--bg-color);
   padding: 3rem 0;
@@ -508,13 +509,12 @@ span {
 .education .timeline::after {
   content: '';
   position: absolute;
-  width: 3px;
-  background: #65D9ff;
   top: 0;
   bottom: 0;
-  left: 0;
-  margin-left: 0;
-  z-index: 1;
+  left: 50px;
+  width: 3px;
+  background: #65D9ff;
+  z-index: 0;
 }
 
 .education .container {
@@ -522,21 +522,26 @@ span {
   position: relative;
   background-color: inherit;
   width: 100%;
-  margin-left: 30px;
+  margin-left: 60px;
 }
-
 .education .container::after {
-  content: '';
+  content: '\f19d';
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--main-color);
   position: absolute;
-  width: 20px;
-  height: 20px;
-  right: auto;
-  left: -20px;
-  background-color: var(--bg-color);
-  border: 4px solid var(--main-color);
+  left: -30px;
   top: 15px;
+  background: var(--bg-color);
+  border: 4px solid var(--main-color);
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }
 
 .education .content {
@@ -544,9 +549,9 @@ span {
   background-color: #ffffff;
   position: relative;
   border-radius: 6px;
-  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
-
 .education .content .tag {
   font-size: 1.5rem;
   color: #000000;
@@ -557,8 +562,7 @@ span {
   font-size: 1rem;
   color: var(--text-color);
 }
-
-button {
+.education .content button {
   background: var(--main-color);
   color: var(--text-color);
   border: none;
@@ -566,27 +570,50 @@ button {
   border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.3s ease;
+  margin-top: 10px;
 }
-
-button:hover {
+.education .content button:hover {
   background: var(--text-color);
   color: var(--bg-color);
 }
-
 @media screen and (max-width: 600px) {
-  .education .container {
-      width: 100%;
-      margin-left: 10px;
-      padding-left: 25px;
-      padding-right: 25px;
-  }
   .education .timeline::after {
-      left: 15px;
+    left: 15px;
   }
+
+  .education .container {
+    width: calc(100% - 40px);
+    margin-left: 40px;
+    padding: 10px 15px;
+  }
+
   .education .container::after {
-      left: 5px;
+    left: -30px;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    top: 10px;
+  }
+
+  .education .content {
+    padding: 15px 20px;
+  }
+
+  .education .content .tag {
+    font-size: 1.2rem;
+  }
+
+  .education .content .decs {
+    font-size: 0.9rem;
+  }
+
+  .education .content button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
   }
 }
+
+
 /*-----------experience-----------*/
 .experience {
   background: var(--second-bg-color);
