@@ -794,7 +794,6 @@ button:hover {
 .contact form {
   max-width: 70rem;
   margin: 1rem auto;
-  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -802,11 +801,12 @@ button:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .contact form .input-box input,
 .contact form textarea {
-  width: 100%;
+  width: 90%;
   padding: 1.5rem;
   font-size: 1.6rem;
   color: var(--text-color);
@@ -930,9 +930,8 @@ button:hover {
 .contact-info a:hover {
   text-decoration: underline;
 }
-/* From Uiverse.io by TreepDeep */
 .button.x {
-  max-width: 320px;
+  max-width: 200px;
   display: flex;
   padding: 0.5rem 1.4rem;
   font-size: 0.875rem;
@@ -952,8 +951,8 @@ button:hover {
   text-decoration: none;
 }
 .button.x svg {
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
   fill: #fff;
   margin-right: 0.5rem;
 }
