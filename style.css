@@ -58,6 +58,7 @@ html::-webkit-scrollbar-thumb {
   align-items: center;
   z-index: 100;
   justify-content: space-between;
+  height: 10rem;
 }
 .logo {
   display: flex;
@@ -187,7 +188,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8rem;
+  gap: 5rem;
   position: relative;
   z-index: 1;
   background: var(--bg-color);
