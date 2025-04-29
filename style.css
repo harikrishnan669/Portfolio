@@ -578,7 +578,7 @@ span {
 }
 @media screen and (max-width: 600px) {
   .education .timeline::after {
-    left: 15px;
+    left: 28px;
   }
 
   .education .container {
