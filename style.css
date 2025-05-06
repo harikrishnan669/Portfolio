@@ -247,6 +247,10 @@ span {
   font-weight: 300;
 }
 /*----------social-icon-------*/
+.social-icon {
+  display: flex;
+  flex-wrap: nowrap; /* Prevents wrapping */
+}
 .social-icon a {
   display: inline-flex;
   justify-content: center;
@@ -883,8 +887,8 @@ span {
   font-size: 25px;
   color: black;
   border: 2px solid black;
-  width: 42px;
-  height: 42px;
+  width: 5rem;
+  height: 5rem;
   display: inline-block;
   text-align: center;
   border-radius: 50%;
