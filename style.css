@@ -835,7 +835,7 @@ span {
 .input-field {
   position: relative;
   width: 90%;
-  margin: 1rem 0;
+  margin: 1.5rem;
 }
 
 .input-field input,
@@ -868,7 +868,7 @@ span {
 .input-field input:valid ~ .user-label,
 .input-field textarea:focus ~ .user-label,
 .input-field textarea:valid ~ .user-label {
-  top: -0.8rem;
+  top: -2rem;
   left: 1.2rem;
   font-size: 1.4rem;
   color: white;
@@ -876,7 +876,7 @@ span {
 .user-label::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 100%;
   left: 0;
   transform: translateY(-50%);
   width: 100%;
