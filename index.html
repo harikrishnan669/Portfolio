@@ -615,25 +615,41 @@
             </div>
         </div>
             </section>
-            <section class="contact" id="contact">
-                <h2 class="heading">Contact <span>Me</span></h2>
-                <form action="" method="post" onsubmit="sendMail(event)">
-                    <div class="input-box">
-                        <input type="text" id="name" name="name" placeholder="Name" required>
-                        <input type="email" id="email" name="email" placeholder="Email" required>
-                        <input type="text" id="phonenumber" name="phone" placeholder="Phone Number" required>
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <textarea id="message" name="message" cols="30" rows="10" placeholder="Your message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-                <div class="contact-info">
-                    <p>Email: <a href="mailto:rharikrishnan2020@gmail.com">rharikrishnan2020@gmail.com</a></p>
-                    <p>Phone: <a href="tel:+919656990468">9656990468</a></p>
-                </div>    
-            </section>
-            
-            <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="" method="post" onsubmit="sendMail(event)">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" id="name" name="name" required>
+                    <label class="user-label" for="name">Name</label>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="email" name="email" required>
+                    <label class="user-label" for="email">Email</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="phonenumber" name="phone" required>
+                    <label class="user-label" for="phonenumber">Phone Number</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="subject" name="subject" required>
+                    <label class="user-label" for="subject">Subject</label>
+                </div>
+            </div>
+            <div class="input-field" style="width: 90%; margin: 1rem auto;">
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <label class="user-label" for="message">Your message</label>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:rharikrishnan2020@gmail.com">rharikrishnan2020@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919656990468">9656990468</a></p>
+        </div>
+    </section>
+
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
             <script type="text/javascript">
                (function(){
                   emailjs.init("gLjba3OfLtOewm34v"); 

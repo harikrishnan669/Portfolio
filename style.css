@@ -810,10 +810,11 @@ span {
 }
 
 /*-----------Contacts--------*/
-.contact{
+.contact {
   background: var(--second-bg-color);
   padding: 3rem 0;
 }
+
 .contact h2 {
   margin-bottom: 3rem;
   color: white;
@@ -831,23 +832,68 @@ span {
   flex-wrap: wrap;
   width: 100%;
 }
-
-.contact form .input-box input,
-.contact form textarea {
+.input-field {
+  position: relative;
   width: 90%;
-  padding: 1.5rem;
-  font-size: 1.6rem;
-  color: var(--text-color);
-  background: var(--bg-color);
-  border-radius: 0.8rem;
-  border: 2px solid var(--main-color);
   margin: 1rem 0;
-  resize: none;
 }
 
+.input-field input,
+.input-field textarea {
+  width: 100%;
+  padding: 2rem 1.5rem 1rem 1.5rem;
+  font-size: 1.8rem;
+  color: white;
+  background: var(--bg-color);
+  border-radius: 0.8rem;
+  border: 2px solid #888;
+  outline: none;
+  resize: none;
+  position: relative;
+  z-index: 0;
+}
+
+.user-label {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.5rem;
+  font-size: 1.8rem;
+  color: white;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  z-index: 1;
+  padding: 0 0.10rem;
+}
+.input-field input:focus ~ .user-label,
+.input-field input:valid ~ .user-label,
+.input-field textarea:focus ~ .user-label,
+.input-field textarea:valid ~ .user-label {
+  top: -0.8rem;
+  left: 1.2rem;
+  font-size: 1.4rem;
+  color: white;
+}
+.user-label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1.2em;
+  z-index: -1;
+  transition: background 0.2s ease;
+}
+.input-field input:focus ~ .user-label::before,
+.input-field input:valid ~ .user-label::before,
+.input-field textarea:focus ~ .user-label::before,
+.input-field textarea:valid ~ .user-label::before {
+  background: transparent;
+}
 .contact form .btn {
   margin-top: 2rem;
 }
+
 .mapbox {
   position: relative;
   height: 250px;
