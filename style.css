@@ -285,7 +285,7 @@ span {
 .btn:hover {
   color: black;
   transform: scale(1.05);
-  background: var(--main-color);
+  background: #65D9ff;
   box-shadow: 0 0 25px var(--main-color);
 }
 .btn::before,
