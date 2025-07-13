@@ -71,3 +71,7 @@ closeIcon.addEventListener("click", () => {
     navbar.classList.remove("active");
     menuIcon.style.display = "block";
 });
+const projectcard = document.querySelector('.projectcard');
+card.addEventListener('click', function() {
+    this.classList.toggle('flipped');
+});
