@@ -461,7 +461,7 @@ span {
 .skills {
   background: var(--bg-color);
   padding: 3rem 0;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .skills .container {
@@ -620,7 +620,7 @@ span {
 
 .education .content {
   padding: 20px 30px;
-  background-color: #ffffff;
+  background-color: #f8f9fa;
   position: relative;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -706,12 +706,6 @@ span {
   padding: 0 1rem;
 }
 
-#experiencecontainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
 .bar {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -720,11 +714,12 @@ span {
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .bar:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(0, 255, 195, 0.3);
 }
 
 .bar .info h3 {
@@ -822,7 +817,7 @@ span {
 
 .projectcard {
   width: 100%;
-  height: 240px;
+  height: 200px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
@@ -914,8 +909,8 @@ span {
 /* ---------- Responsive ---------- */
 @media screen and (max-width: 768px) {
   .projects .container {
-    width: 95%;
-    padding: 2rem 1.2rem;
+    width: 90%;
+    padding: 1rem 1.2rem;
   }
 
   .projects .container h2 {
@@ -923,7 +918,7 @@ span {
   }
 
   .projectcard {
-    height: 250px;
+    height: 200px;
   }
 
   .projectcard-front h2,
@@ -942,6 +937,12 @@ span {
 
   .projects .info a {
     font-size: 0.95rem;
+  }
+  .icon-container{
+    padding-top: 20px;
+  }
+  .projects .info p{
+    align-content: center;
   }
 }
 
