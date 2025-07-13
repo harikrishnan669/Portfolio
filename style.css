@@ -411,19 +411,17 @@ span {
 .interests {
   padding: 2rem 1rem;
 }
-
-/* Card Container */
 .interest-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
+  gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .interest-card {
   background: linear-gradient(145deg, #1c1c1c, #111);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 5rem;
   text-align: center;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
@@ -809,7 +807,7 @@ span {
 
 /* Flip Card Container */
 .projectcard-container {
-  perspective: 1000px;
+  perspective: 1200px;
   max-width: 320px;
   width: 100%;
   margin: auto;
@@ -820,9 +818,8 @@ span {
   height: 200px;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.8s ease;
-  cursor: pointer;
-  color: white;
+  transition: transform 1s ease;
+  will-change: transform;
 }
 
 .projectcard:hover {
@@ -834,7 +831,11 @@ span {
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
   border-radius: 15px;
   padding: 1.5rem;
   box-sizing: border-box;
@@ -847,23 +848,33 @@ span {
   color: #fff;
 }
 
+.projectcard-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.projectcard-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
 .projectcard-front h2,
 .projectcard-back h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--main-color, #00ffc3);
   text-align: center;
   margin-bottom: 1rem;
 }
 
-.projectcard-front {
-  border: 1px solid #333;
+.projectcard-front p,
+.projectcard-back p {
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+  line-height: 1.4;
 }
 
-.projectcard-back {
-  border: 1px solid #444;
-  transform: rotateY(180deg);
-}
-
+/* Optional: Project bar styles (if used elsewhere) */
 .projects .bar {
   background: #000;
   color: #fff;
@@ -882,6 +893,7 @@ span {
   transform: translateY(-5px);
   box-shadow: 0 6px 25px var(--main-color, #00ffc3);
 }
+
 
 .projects .bar .info {
   display: flex;
