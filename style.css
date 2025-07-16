@@ -235,6 +235,18 @@ span {
   box-shadow: 0 0 25px var(--main-color);
   cursor: pointer;
   object-fit: cover;
+  animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .home-img img:hover {
