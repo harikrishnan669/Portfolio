@@ -425,7 +425,7 @@ span {
 .interest-container {
   display: grid;
   grid-template-columns: repeat(4, 280px);
-  gap: 8rem;
+  gap: 5rem;
   justify-content: center;
   max-width: 100%;
   padding: 2rem 5rem;
@@ -484,7 +484,7 @@ span {
 @media (max-width: 768px) {
   .interest-container {
     grid-template-columns: repeat(1, 260px);
-    padding: 2rem;
+    padding: 1rem;
   }
 }
 
@@ -921,7 +921,7 @@ span {
 
 .projectcard-front p,
 .projectcard-back p {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   color: #ccc;
   text-align: center;
   line-height: 1.4;
@@ -964,7 +964,7 @@ span {
 .projects .info a {
   color: #00ffc3;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 2rem;
   transition: color 0.3s ease;
 }
 .projects .info a:hover {
