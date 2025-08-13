@@ -419,50 +419,91 @@ span {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
-
 .interests {
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 }
 .interest-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-template-columns: repeat(4, 280px);
+  gap: 8rem;
+  justify-content: center;
+  max-width: 100%;
+  padding: 2rem 5rem;
+  box-sizing: border-box;
 }
-
 .interest-card {
-  background: linear-gradient(145deg, #1c1c1c, #111);
-  border-radius: 10px;
-  padding: 5rem;
-  text-align: center;
+  position: relative;
+  width: 260px;
+  height: 364px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.interest-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+  z-index: 1;
+}
 .interest-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+.interest-card-content {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 2;
+  color: #fff;
 }
 
-.interest-card h3 {
-  font-size: 1.8rem;
-  color: #65D9ff;
-  margin-bottom: 1rem;
-}
-
-.interest-card p {
+.interest-card-content h3 {
   font-size: 2rem;
-  color: #e0e0e0;
-  line-height: 1.6;
+  margin-bottom: 0.4rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+.interest-card-content p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
   .interest-container {
-    grid-template-columns: 1fr;
-    padding: 0 1rem;
+    grid-template-columns: repeat(2, 260px);
+    padding: 2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .interest-container {
+    grid-template-columns: repeat(1, 260px);
+    padding: 2rem;
+  }
+}
+
+.interest-card:nth-child(1) {
+  background-image: url('./cardimages/MERN Stack , Mongo DB , Express js , React js , Node js _.jpeg');
+}
+
+.interest-card:nth-child(2) {
+  background-image: url('./cardimages/16829080_5741168.jpg');
+}
+
+.interest-card:nth-child(3) {
+  background-image: url('./cardimages/1678534936_en-idei-club-p-designer-wallpaper-vkontakte-4.jpg');
+}
+
+.interest-card:nth-child(4) {
+  background-image: url('./cardimages/HD wallpaper_ black, white, programming, programming language, Python (programming).jpeg');
+}
+
 /*------------Skills-----------*/
 .heading {
   text-align: center;
