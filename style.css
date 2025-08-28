@@ -435,13 +435,12 @@ span {
   position: relative;
   width: 260px;
   height: 364px;
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .interest-card::before {
@@ -484,7 +483,7 @@ span {
 @media (max-width: 768px) {
   .interest-container {
     grid-template-columns: repeat(1, 260px);
-    padding: 1rem;
+    padding: 2rem;
   }
 }
 
@@ -747,7 +746,7 @@ span {
 
 .experience .heading {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 2rem;
 }
 
@@ -832,7 +831,10 @@ span {
   padding: 4rem 1rem;
   color: var(--text-color, #ffffff);
 }
-
+.projects h4{
+  font-size: 1.5rem;
+  text-align: center;
+}
 .projects .container {
   background: var(--bg-color);
   backdrop-filter: blur(10px);
