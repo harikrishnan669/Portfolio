@@ -790,6 +790,38 @@ span {
   line-height: 1.6;
   color: #e0e0e0;
 }
+.labels {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.labels span {
+  color: #65D9ff;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: lowercase;
+  border: 1px solid #ffffff;
+  padding: 5px 12px;
+  border-radius: 999px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* 📱 Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .labels {
+    gap: 6px;
+  }
+
+  .labels span {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+}
+
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
