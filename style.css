@@ -96,7 +96,7 @@ html::-webkit-scrollbar-thumb {
 .navbar a:hover,
 .navbar a.active {
   color: var(--main-color);
-  border-bottom: 3px solid var(--main-color);
+  border-bottom: 2px solid #65D9ff;
 }
 #menu-icon {
   font-size: 3.6rem;
@@ -941,6 +941,8 @@ span {
   transform-style: preserve-3d;
   transition: transform 1s ease;
   will-change: transform;
+  border: 2px solid #65D9ff;
+  border-radius: 10px;
 }
 
 .projectcard:hover {
@@ -1170,7 +1172,7 @@ span {
   width: 100%;
   border-radius: 16px;
   margin-bottom: 5px;
-  border: 1px solid white;
+  border: 2px solid #65D9ff;
   overflow: hidden;
   background-color: #000;
 }
