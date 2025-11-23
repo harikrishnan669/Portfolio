@@ -147,7 +147,7 @@ html::-webkit-scrollbar-thumb {
 
   #close-icon {
     display: block;
-    font-size: 6rem; /* Increased size */
+    font-size: 6rem;
     color: white;
     cursor: pointer;
     margin-bottom: 1.5rem;
@@ -173,7 +173,6 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-/* Hide close icon on desktop */
 @media (min-width: 501px) {
   #close-icon {
     display: none;
@@ -236,6 +235,7 @@ span {
   cursor: pointer;
   object-fit: cover;
   animation: floatImage 4s ease-in-out infinite;
+  border: 2px solid #65D9ff;
 }
 @keyframes floatImage {
   0% {
