@@ -234,8 +234,6 @@ span {
   box-shadow: 0 0 25px var(--main-color);
   cursor: pointer;
   object-fit: cover;
-  animation: floatImage 4s ease-in-out infinite;
-  border: 2px solid #65D9ff;
 }
 @keyframes floatImage {
   0% {
