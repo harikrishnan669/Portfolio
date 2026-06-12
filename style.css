@@ -533,7 +533,9 @@ span {
 .heading {
   text-align: center;
   font-size: 4rem;
+  margin-bottom: 4rem;
 }
+
 .skills {
   background: var(--bg-color);
   padding: 3rem 0;
@@ -550,14 +552,69 @@ span {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease;
 }
-.skills .container .row {
+
+/* Category Sections */
+.skill-category {
+  margin-bottom: 5rem;
+}
+
+.skill-category:last-child {
+  margin-bottom: 0;
+}
+
+.skill-category h3 {
+  position: relative;
+  font-size: 2.2rem;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  z-index: 1;
+}
+
+.skill-category h3::before {
+  content: attr(data-title);
+  position: absolute;
+
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  white-space: nowrap;
+
+  color: rgba(101, 217, 255, 0.15);
+
+  text-shadow: 0 0 20px rgba(101, 217, 255, 0.12);
+
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.skill-category h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+
+  width: 70px;
+  height: 4px;
+  border-radius: 10px;
+}
+
+/* Grid Layout */
+.skills .row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 140px));
+  gap: 2rem;
   justify-content: center;
   padding: 1rem 0;
 }
 
+/* Cards */
 .skills .card {
   background: #1c1c1c;
   border-radius: 12px;
@@ -565,10 +622,13 @@ span {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   position: relative;
+  width: 140px;
+  min-height: 140px;
   padding: 1rem 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border: 2px solid transparent;
 }
 
@@ -578,7 +638,7 @@ span {
   box-shadow: 0 8px 20px rgba(0, 255, 200, 0.2);
 }
 
-.skills .card .image-box {
+.skills .card .info {
   height: 60px;
   width: 60px;
   display: flex;
@@ -587,62 +647,104 @@ span {
   margin-bottom: 1rem;
 }
 
-.skills .card .image-box img {
+.skills .card .info img {
   max-width: 100%;
   max-height: 100%;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  filter: grayscale(100%) opacity(0.7);
+  transition: transform 0.4s ease;
 }
 
-.skills .card:hover .image-box img {
+.skills .card:hover .info img {
   transform: scale(1.1);
-  filter: grayscale(0%) opacity(1);
 }
 
+/* Content */
 .skills .card .content {
   text-align: center;
 }
 
-.skills .card .title {
-  font-size: 0.95rem;
+.skills .card .content h2 {
+  font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
 }
 
-/* Responsive styles */
+.skills .card .content p {
+  font-size: 0.95rem;
+  color: #aaa;
+  line-height: 1.3;
+}
+
+/* Tablet */
 @media screen and (max-width: 768px) {
   .skills .container {
     width: 90%;
     padding: 2rem 1rem;
   }
 
-  .skills .container .row {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+  .skills .row {
+    grid-template-columns: repeat(3, 120px);
+    gap: 1.2rem;
+    justify-content: center;
   }
 
   .skills .card {
-    padding: 0.8rem;
+    width: 120px;
+    min-height: 120px;
   }
 
-  .skills .card .image-box {
-    height: 50px;
+  .skills .card .info {
     width: 50px;
+    height: 50px;
   }
 
-  .skills .card .title {
+  .skills .card .content h2 {
     font-size: 0.85rem;
   }
-}
 
-@media screen and (max-width: 480px) {
-  .skills .container .row {
-    grid-template-columns: repeat(2, 1fr);
+  .skills .card .content p {
+    font-size: 0.7rem;
+  }
+
+  .skill-category h3 {
+    font-size: 2rem;
   }
 }
 
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .heading {
+    font-size: 3rem;
+  }
+
+  .skills .container {
+    width: 95%;
+  }
+
+  .skills .row {
+    grid-template-columns: repeat(2, 120px);
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .skills .card {
+    width: 120px;
+    min-height: 120px;
+  }
+
+  .skill-category h3 {
+    font-size: 1.7rem;
+  }
+
+  .skills .card .content h2 {
+    font-size: 0.8rem;
+  }
+
+  .skills .card .content p {
+    display: none;
+  }
+}
 /*----------------Education----------*/
 
 .education {
