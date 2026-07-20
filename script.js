@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-const words = ['CS Undergraduate', 'A Graphic Designer', 'Web Development', 'UI/UX Designing'];
+const words = ['Software Engineer', 'A Graphic Designer', 'Software Development', 'UI/UX Designer','CSE Graduate'];
 let wordIndex = 0;
 let charIndex = 0;
 const typingElement = document.getElementById('typed-text');
